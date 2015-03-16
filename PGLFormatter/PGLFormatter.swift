@@ -22,7 +22,20 @@ public class PGLFormatter: NSObject {
         }
         return Static.instance
     }
-    
+
+    class var dateFormatter: NSDateFormatter {
+        struct Static {
+            static let instance : NSDateFormatter = {
+                let formatter = NSDateFormatter()
+                formatter.dateStyle = .ShortStyle
+                formatter.timeStyle = .ShortStyle
+                return formatter
+                }()
+            
+        }
+        return Static.instance
+    }
+
 }
 
 

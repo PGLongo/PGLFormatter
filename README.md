@@ -21,6 +21,22 @@ price.format() // $12,356,789.42
 
 ```
 
+### NSDate
+```swift
+let calendar = NSCalendar.currentCalendar()
+let components = NSDateComponents()
+components.year = 1988
+components.month = 11
+components.day = 30
+components.hour = 0
+components.minute = 0
+components.second = 0
+let date = calendar.dateFromComponents(components)
+
+date.format() // 11/30/88, 12:00 AM
+
+```
+
 
 ## Task
 - [ ] Support Cocoapods
