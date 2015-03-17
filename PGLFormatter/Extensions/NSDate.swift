@@ -12,4 +12,8 @@ public extension NSDate{
     func format() -> String{
         return PGLFormatter.dateFormatter.stringFromDate(self)
     }
+    
+    class func fromString(string: String) -> NSDate? {
+        return PGLFormatter.dateFormatter.dateFromString(string)
+    }
 }

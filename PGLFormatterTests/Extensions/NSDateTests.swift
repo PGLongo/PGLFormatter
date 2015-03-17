@@ -39,5 +39,32 @@ class NSDateTests: XCTestCase {
         XCTAssertTrue(countElements(result) > 0 )
         XCTAssertEqual("11/30/88, 12:00 AM", result , "String mismatch")
     }
+    
+    func testFromString(){
+        let dateFormatter = PGLFormatter.dateFormatter
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        var dateFromString = NSDate.fromString("11/30/1988")
+        XCTAssertNotNil(dateFromString)
+        XCTAssertEqual(date, dateFromString!, "Date mismatch")
+
+        dateFormatter.dateFormat = "MM/dd/yyyy hh:mm"
+        dateFromString = NSDate.fromString("11/30/1988 00:00")
+        XCTAssertNotNil(dateFromString)
+        XCTAssertEqual(date, dateFromString!, "Date mismatch")
+
+    }
+    
+    func testFromStringWithInvalidFormat(){
+        let dateFormatter = PGLFormatter.dateFormatter
+        var dateString = "11/30/1988"
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        
+        XCTAssertNil(NSDate.fromString("11/42/1988"))
+        XCTAssertNil(NSDate.fromString("42/30/1988"))
+        XCTAssertNil(NSDate.fromString("30/11/-1988"))
+        XCTAssertNil(NSDate.fromString("3.14/11/1988"))
+        XCTAssertNil(NSDate.fromString("30/11/3.14"))
+    }
+
 
 }
