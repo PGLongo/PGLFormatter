@@ -10,7 +10,7 @@ import UIKit
 
 public class PGLFormatter: NSObject {
     
-    class var numberFormatter: NSNumberFormatter {
+    public class var numberFormatter: NSNumberFormatter {
         struct Static {
             static let instance : NSNumberFormatter = {
                 let formatter = NSNumberFormatter()
@@ -23,7 +23,7 @@ public class PGLFormatter: NSObject {
         return Static.instance
     }
 
-    class var dateFormatter: NSDateFormatter {
+    public class var dateFormatter: NSDateFormatter {
         struct Static {
             static let instance : NSDateFormatter = {
                 let formatter = NSDateFormatter()
