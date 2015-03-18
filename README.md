@@ -5,7 +5,17 @@ PGLFormatter is a simple container of NSFormatter and useful functions
 Formatters are extremely expensive to create so it's very important to reuse the formatter as much as you can. 
 
 If you use the same formatter in the entire project you can set in a single point (e.g. AppDelegate) and then forget about the NSFormatter and simple use the function that PGLFormatter offers, for format() to format Double Float Int (see the example), otherwise you should remember to set the behavior every time
+## Add PGLFormatter to your project
 
+#### Cocoapods
+
+To integrate SuperRecord into your Xcode project using [Cocoapods](http://cocoapods.org/), specify it in your Podfile:
+
+	use_frameworks!
+	pod 'PGLFormatter'
+	
+- Build	
+- Add import PGLFormatter
 
 ## Example
 
@@ -39,9 +49,9 @@ date.format() // 11/30/88, 12:00 AM
 
 
 ## Task
-- [ ] Support Cocoapods
+- [ x] Support Cocoapods
 - [ ] Support Carthage
-- [ ] Add installation instruction
+- [ x] Add installation instruction
 - [ ] Add other formatters
 - [ ] Implements other useful functions
 
