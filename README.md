@@ -6,6 +6,8 @@ PGLFormatter is a simple container of NSFormatter and useful functions
 ##Reason
 Formatters are extremely expensive to create so it's very important to reuse the formatter as much as you can. 
 
+This project is inspired from this [article](http://nshipster.com/nsformatter/) published on [NSHipster](http://nshipster.com/)
+
 If you use the same formatter in the entire project you can set in a single point (e.g. AppDelegate) and then forget about the NSFormatter and simple use the function that PGLFormatter offers, for format() to format Double Float Int (see the example), otherwise you should remember to set the behavior every time
 ## Add PGLFormatter to your project
 
@@ -33,7 +35,17 @@ var formatter = PGLFormatter.numberFormatter
 formatter.numberStyle = .CurrencyStyle
 
 price.format() // $12,356,789.42
+```
 
+#### Formatting Byte
+
+```swift
+var formatter = PGLFormatter.byteFormatter
+// set the formatter behavior
+
+42.formatToByte() // "42 bytes"
+42000.formatToByte() // "42 KB"
+Int64(42000000000).formatToByte() // 42 GB
 ```
 
 ### NSDate
