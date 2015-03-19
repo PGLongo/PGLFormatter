@@ -14,6 +14,7 @@ public class PGLFormatter: NSObject {
         struct Static {
             static let instance : NSNumberFormatter = {
                 let formatter = NSNumberFormatter()
+                formatter.locale = NSLocale.currentLocale()
                 formatter.formatterBehavior = .BehaviorDefault
                 formatter.numberStyle = .DecimalStyle
                 return formatter
@@ -27,6 +28,7 @@ public class PGLFormatter: NSObject {
         struct Static {
             static let instance : NSDateFormatter = {
                 let formatter = NSDateFormatter()
+                formatter.locale = NSLocale.currentLocale()
                 formatter.dateStyle = .ShortStyle
                 formatter.timeStyle = .ShortStyle
                 return formatter
