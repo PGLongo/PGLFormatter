@@ -1,6 +1,8 @@
 # PGLFormatter
 PGLFormatter is a simple container of NSFormatter and useful functions  
 [![Build Status](https://travis-ci.org/PGLongo/PGLFormatter.svg?branch=master)](https://travis-ci.org/PGLongo/PGLFormatter)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 ##Reason
 Formatters are extremely expensive to create so it's very important to reuse the formatter as much as you can. 
 
@@ -9,14 +11,17 @@ If you use the same formatter in the entire project you can set in a single poin
 
 #### Cocoapods
 
-To integrate SuperRecord into your Xcode project using [Cocoapods](http://cocoapods.org/), specify it in your Podfile:
+To integrate PGLFormatter into your Xcode project using [Cocoapods](http://cocoapods.org/), specify it in your Podfile:
 
 	use_frameworks!
 	pod 'PGLFormatter'
-	
-- Build	
-- Add import PGLFormatter
 
+#### Carthage
+
+To integrate PGLFormatter into your Xcode project using [Carthage](https://github.com/Carthage/Carthage), specify it in your Cartfile:
+
+	github "PGLongo/PGLFormatter"
+	
 ## Example
 
 ### Double Float Int
@@ -49,9 +54,9 @@ date.format() // 11/30/88, 12:00 AM
 
 
 ## Task
-- [ x] Support Cocoapods
-- [ ] Support Carthage
-- [ x] Add installation instruction
+- [x] Support Cocoapods
+- [x] Support Carthage
+- [x] Add installation instruction
 - [ ] Add other formatters
 - [ ] Implements other useful functions
 
