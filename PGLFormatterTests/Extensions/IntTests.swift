@@ -32,4 +32,11 @@ class IntTests: XCTestCase {
         XCTAssertEqual("$1,234.0000", price.format())
         
     }
+    
+    func testByteFormat(){
+        XCTAssertEqual("42 bytes", 42.formatToByte())
+        XCTAssertEqual("42 KB", 42000.formatToByte())
+        let byte:Int64 = 42000000000
+        XCTAssertEqual("42 GB", byte.formatToByte())
+    }
 }

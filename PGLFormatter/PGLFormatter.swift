@@ -38,6 +38,19 @@ public class PGLFormatter: NSObject {
         return Static.instance
     }
 
+    public class var byteFormatter: NSByteCountFormatter {
+        struct Static {
+            static let instance : NSByteCountFormatter = {
+                let formatter = NSByteCountFormatter()
+                return formatter
+                }()
+            
+        }
+        return Static.instance
+    }
+
+
+    
 }
 
 

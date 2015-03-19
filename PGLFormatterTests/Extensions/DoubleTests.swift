@@ -33,4 +33,10 @@ class DoubleTests: XCTestCase {
 
     }
 
+    
+    func testByteFormat(){
+
+        XCTAssertEqual("42 bytes", Double(42).formatToByte())
+        XCTAssertEqual("42 KB", Double(42000).formatToByte())
+    }
 }

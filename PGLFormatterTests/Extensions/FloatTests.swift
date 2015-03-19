@@ -32,5 +32,11 @@ class FloatTests: XCTestCase {
         XCTAssertEqual("$1,234.4240", price.format())
         
     }
+    
+    func testByteFormat(){
+        
+        XCTAssertEqual("42 bytes", Float(42).formatToByte())
+        XCTAssertEqual("42 KB", Float(42000).formatToByte())
+    }
 
 }

@@ -13,5 +13,16 @@ public extension Int {
     func format() -> String{
         return PGLFormatter.numberFormatter.stringFromNumber(self)!
     }
+    
+    func formatToByte() -> String {
+        return PGLFormatter.byteFormatter.stringFromByteCount(Int64(self))
+    }
+
+}
+
+public extension Int64 {
+    func formatToByte() -> String {
+        return PGLFormatter.byteFormatter.stringFromByteCount(self)
+    }
 
 }
