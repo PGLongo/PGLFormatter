@@ -48,7 +48,7 @@ var formatter = PGLFormatter.byteFormatter
 Int64(42000000000).formatToByte() // 42 GB
 ```
 
-#### Formatting Byte
+#### Formatting Lenght
 
 ```swift
 var formatter = PGLFormatter.lenghtFormatter
