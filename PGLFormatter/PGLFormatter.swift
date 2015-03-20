@@ -59,7 +59,18 @@ public class PGLFormatter: NSObject {
         }
         return Static.instance
     }
-    
+
+    public class var massFormatter: NSMassFormatter {
+        struct Static {
+            static let instance : NSMassFormatter = {
+                let formatter = NSMassFormatter()
+                return formatter
+                }()
+            
+        }
+        return Static.instance
+    }
+
     
 
 

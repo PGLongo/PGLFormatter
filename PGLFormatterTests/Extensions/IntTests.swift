@@ -58,4 +58,25 @@ class IntTests: XCTestCase {
         formatter.unitStyle = .Long
         XCTAssertEqual("42 meters", 42.formatLenght(.Meter))
     }
+    
+    
+    func testFormatMassFromKilograms(){
+        var formatter = PGLFormatter.massFormatter
+        XCTAssertNotNil(formatter, "Formatter should be not nil")
+        formatter.unitStyle = .Medium
+        XCTAssertEqual("92.594 lb", 42.formatMassFromKilograms())
+    }
+    
+    func testFormatMass(){
+        var formatter = PGLFormatter.massFormatter
+        XCTAssertNotNil(formatter, "Formatter should be not nil")
+        formatter.unitStyle = .Medium
+        XCTAssertEqual("42 g", 42.formatMass(.Gram))
+        XCTAssertEqual("42 kg", 42.formatMass(.Kilogram))
+        XCTAssertEqual("-42 g", (-42).formatMass(.Gram))
+        XCTAssertNotNil(formatter, "Formatter should be not nil")
+        formatter.unitStyle = .Long
+        XCTAssertEqual("42 kilograms", 42.formatMass(.Kilogram))
+    }
 }
+

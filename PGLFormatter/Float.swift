@@ -25,5 +25,16 @@ public extension Float {
     func formatLenght(unit: NSLengthFormatterUnit)->String{
         return PGLFormatter.lenghtFormatter.stringFromValue(Double(self), unit:unit)
     }
+    
+    func formatMassFromKilograms()->String{
+        return PGLFormatter.massFormatter.stringFromKilograms(Double(self))
+    }
+    
+    func formatMass(unit: NSMassFormatterUnit)->String{
+        return PGLFormatter.massFormatter.stringFromValue(Double(self), unit:unit)
+    }
+
 }
+
+
 

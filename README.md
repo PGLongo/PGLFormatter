@@ -58,6 +58,16 @@ var formatter = PGLFormatter.lenghtFormatter
 42.formatLenghtFromMeters() // 45.931 yd
 ```
 
+#### Formatting Mass
+
+```swift
+var formatter = PGLFormatter.massFormatter
+// set the formatter behavior
+
+42.formatMass(.Gram) // 42 g
+42.formatMassFromKilograms() // 92.594 lb
+```
+
 ### NSDate
 ```swift
 let calendar = NSCalendar.currentCalendar()

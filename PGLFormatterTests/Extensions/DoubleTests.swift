@@ -56,4 +56,24 @@ class DoubleTests: XCTestCase {
         formatter.unitStyle = .Long
         XCTAssertEqual("42.42 meters", Double(42.42).formatLenght(.Meter))
     }
+    
+    func testFormatMassFromKilograms(){
+        var formatter = PGLFormatter.massFormatter
+        XCTAssertNotNil(formatter, "Formatter should be not nil")
+        formatter.unitStyle = .Medium
+        XCTAssertEqual("93.52 lb", Double(42.42).formatMassFromKilograms())
+    }
+    
+    func testFormatMass(){
+        var formatter = PGLFormatter.massFormatter
+        XCTAssertNotNil(formatter, "Formatter should be not nil")
+        formatter.unitStyle = .Medium
+        XCTAssertEqual("42.42 g", Double(42.42).formatMass(.Gram))
+        XCTAssertEqual("42.42 kg", Double(42.42).formatMass(.Kilogram))
+        XCTAssertEqual("-42.42 g", Double(-42.42).formatMass(.Gram))
+        XCTAssertNotNil(formatter, "Formatter should be not nil")
+        formatter.unitStyle = .Long
+        XCTAssertEqual("42.42 kilograms", Double(42.42).formatMass(.Kilogram))
+    }
+
 }

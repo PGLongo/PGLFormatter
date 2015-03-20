@@ -26,4 +26,13 @@ public extension Double {
     func formatLenght(unit: NSLengthFormatterUnit)->String{
         return PGLFormatter.lenghtFormatter.stringFromValue(self, unit:unit)
     }
+    
+    func formatMassFromKilograms()->String{
+        return PGLFormatter.massFormatter.stringFromKilograms(self)
+    }
+    
+    func formatMass(unit: NSMassFormatterUnit)->String{
+        return PGLFormatter.massFormatter.stringFromValue(self, unit:unit)
+    }
+
 }
