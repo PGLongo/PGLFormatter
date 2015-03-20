@@ -38,5 +38,23 @@ class FloatTests: XCTestCase {
         XCTAssertEqual("42 bytes", Float(42).formatToByte())
         XCTAssertEqual("42 KB", Float(42000).formatToByte())
     }
+    
+    func testFormatLengthFromMeters(){
+        var formatter = PGLFormatter.lenghtFormatter
+        XCTAssertNotNil(formatter, "Formatter should be not nil")
+        formatter.unitStyle = .Medium
+        XCTAssertEqual("46.391 yd", Float(42.42).formatLenghtFromMeters())
+    }
+    
+    func testFormatLength(){
+        var formatter = PGLFormatter.lenghtFormatter
+        XCTAssertNotNil(formatter, "Formatter should be not nil")
+        formatter.unitStyle = .Medium
+        XCTAssertEqual("42.42 m", Float(42.42).formatLenght(.Meter))
+        XCTAssertEqual("42.42 km", Float(42.42).formatLenght(.Kilometer))
+        XCTAssertEqual("-42.42 m", Float(-42.42).formatLenght(.Meter))
+        formatter.unitStyle = .Long
+        XCTAssertEqual("42.42 meters", Float(42.42).formatLenght(.Meter))
+    }
 
 }

@@ -32,11 +32,28 @@ class DoubleTests: XCTestCase {
         XCTAssertEqual("$12,356,789.4240", price.format())
 
     }
-
     
     func testByteFormat(){
 
         XCTAssertEqual("42 bytes", Double(42).formatToByte())
         XCTAssertEqual("42 KB", Double(42000).formatToByte())
+    }
+    
+    func testFormatLengthFromMeters(){
+        var formatter = PGLFormatter.lenghtFormatter
+        XCTAssertNotNil(formatter, "Formatter should be not nil")
+        formatter.unitStyle = .Medium
+        XCTAssertEqual("46.391 yd", Double(42.42).formatLenghtFromMeters())
+    }
+    
+    func testFormatLength(){
+        var formatter = PGLFormatter.lenghtFormatter
+        XCTAssertNotNil(formatter, "Formatter should be not nil")
+        formatter.unitStyle = .Medium
+        XCTAssertEqual("42.42 m", Double(42.42).formatLenght(.Meter))
+        XCTAssertEqual("42.42 km", Double(42.42).formatLenght(.Kilometer))
+        XCTAssertEqual("-42.42 m", Double(-42.42).formatLenght(.Meter))
+        formatter.unitStyle = .Long
+        XCTAssertEqual("42.42 meters", Double(42.42).formatLenght(.Meter))
     }
 }

@@ -39,4 +39,23 @@ class IntTests: XCTestCase {
         let byte:Int64 = 42000000000
         XCTAssertEqual("42 GB", byte.formatToByte())
     }
+
+    func testFormatLengthFromMeters(){
+        var formatter = PGLFormatter.lenghtFormatter
+        XCTAssertNotNil(formatter, "Formatter should be not nil")
+        formatter.unitStyle = .Medium
+        XCTAssertEqual("45.931 yd", 42.formatLenghtFromMeters())
+    }
+    
+    func testFormatLength(){
+        var formatter = PGLFormatter.lenghtFormatter
+        XCTAssertNotNil(formatter, "Formatter should be not nil")
+        formatter.unitStyle = .Medium
+        XCTAssertEqual("42 m", 42.formatLenght(.Meter))
+        XCTAssertEqual("42 km", 42.formatLenght(.Kilometer))
+        XCTAssertEqual("-42 m", (-42).formatLenght(.Meter))
+        XCTAssertNotNil(formatter, "Formatter should be not nil")
+        formatter.unitStyle = .Long
+        XCTAssertEqual("42 meters", 42.formatLenght(.Meter))
+    }
 }

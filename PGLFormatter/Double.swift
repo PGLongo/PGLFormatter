@@ -17,4 +17,13 @@ public extension Double {
     func formatToByte() -> String {
         return PGLFormatter.byteFormatter.stringFromByteCount(Int64(self))
     }
+    
+    
+    func formatLenghtFromMeters()->String{
+        return PGLFormatter.lenghtFormatter.stringFromMeters(self)
+    }
+    
+    func formatLenght(unit: NSLengthFormatterUnit)->String{
+        return PGLFormatter.lenghtFormatter.stringFromValue(self, unit:unit)
+    }
 }

@@ -17,6 +17,14 @@ public extension Int {
     func formatToByte() -> String {
         return PGLFormatter.byteFormatter.stringFromByteCount(Int64(self))
     }
+    
+    func formatLenghtFromMeters()->String{
+        return PGLFormatter.lenghtFormatter.stringFromMeters(Double(self))
+    }
+    
+    func formatLenght(unit: NSLengthFormatterUnit)->String{
+        return PGLFormatter.lenghtFormatter.stringFromValue(Double(self), unit:unit)
+    }
 
 }
 

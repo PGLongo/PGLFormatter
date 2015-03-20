@@ -48,6 +48,19 @@ public class PGLFormatter: NSObject {
         }
         return Static.instance
     }
+ 
+    public class var lenghtFormatter: NSLengthFormatter {
+        struct Static {
+            static let instance : NSLengthFormatter = {
+                let formatter = NSLengthFormatter()
+                return formatter
+                }()
+            
+        }
+        return Static.instance
+    }
+    
+    
 
 
     

@@ -48,6 +48,16 @@ var formatter = PGLFormatter.byteFormatter
 Int64(42000000000).formatToByte() // 42 GB
 ```
 
+#### Formatting Byte
+
+```swift
+var formatter = PGLFormatter.lenghtFormatter
+// set the formatter behavior
+
+42.formatLenght(.Meter) // 42 m
+42.formatLenghtFromMeters() // 45.931 yd
+```
+
 ### NSDate
 ```swift
 let calendar = NSCalendar.currentCalendar()
