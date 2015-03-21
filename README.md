@@ -89,7 +89,7 @@ date.format() // 11/30/88, 12:00 AM
 - [x] Support Cocoapods
 - [x] Support Carthage
 - [x] Add installation instruction
-- [ ] Add other formatters
+- [x] Add other formatters
 - [ ] Implements other useful functions
 
 
