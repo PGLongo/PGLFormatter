@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "PGLFormatter"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Simple container of NSFormatter and useful functions to format numbers and dates."
 
   s.description  = <<-DESC
