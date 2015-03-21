@@ -9,6 +9,12 @@
 import UIKit
 
 public extension NSNumberFormatter{
+    
+    
+    /**
+        Set the number of digit
+    */
+
     func setPrecision(precision: Int){
         self.minimumFractionDigits = precision
         self.maximumFractionDigits = precision

@@ -8,8 +8,14 @@
 
 import UIKit
 
+/**
+PGLFormatter is a container of NSFormatter exposed as class var for better reuse and used by the extensions implemented
+*/
 public class PGLFormatter: NSObject {
     
+    /**
+    NSNumberFormatter
+    */
     public class var numberFormatter: NSNumberFormatter {
         struct Static {
             static let instance : NSNumberFormatter = {
@@ -24,6 +30,9 @@ public class PGLFormatter: NSObject {
         return Static.instance
     }
 
+    /**
+    NSDateFormatter
+    */
     public class var dateFormatter: NSDateFormatter {
         struct Static {
             static let instance : NSDateFormatter = {
@@ -38,6 +47,9 @@ public class PGLFormatter: NSObject {
         return Static.instance
     }
 
+    /**
+    NSByteCountFormatter
+    */
     public class var byteFormatter: NSByteCountFormatter {
         struct Static {
             static let instance : NSByteCountFormatter = {
@@ -49,6 +61,9 @@ public class PGLFormatter: NSObject {
         return Static.instance
     }
  
+    /**
+    NSLengthFormatter
+    */
     public class var lenghtFormatter: NSLengthFormatter {
         struct Static {
             static let instance : NSLengthFormatter = {
@@ -60,6 +75,9 @@ public class PGLFormatter: NSObject {
         return Static.instance
     }
 
+    /**
+    NSMassFormatter
+    */
     public class var massFormatter: NSMassFormatter {
         struct Static {
             static let instance : NSMassFormatter = {
