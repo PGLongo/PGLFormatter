@@ -84,12 +84,21 @@ date.format() // 11/30/88, 12:00 AM
 
 ```
 
+## Documentation
+Documentation is generated and manteined by Cocoapods. You can read the latest documentation at the following [URL](http://cocoadocs.org/docsets/PGLFormatter/latest) and add the docs to [Dash](http://kapeli.com/dash).
+
+- [0.0.1](http://cocoadocs.org/docsets/PGLFormatter/0.0.1/)
+- [0.0.2](http://cocoadocs.org/docsets/PGLFormatter/0.0.2/)
+- [0.0.3 - latest](http://cocoadocs.org/docsets/PGLFormatter/0.0.3/)
+
+Because of a Cocoapods bug only the [0.0.1](http://cocoadocs.org/docsets/PGLFormatter/0.0.1/) is available, as soon as they fixed it all the docs would be generated.
 
 ## Task
 - [x] Support Cocoapods
 - [x] Support Carthage
 - [x] Add installation instruction
 - [x] Add other formatters
+- [x] Add documentation
 - [ ] Implements other useful functions
 
 
