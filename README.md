@@ -89,9 +89,8 @@ Documentation is generated and manteined by Cocoapods. You can read the latest d
 
 - [0.0.1](http://cocoadocs.org/docsets/PGLFormatter/0.0.1/)
 - [0.0.2](http://cocoadocs.org/docsets/PGLFormatter/0.0.2/)
-- [0.0.3 - latest](http://cocoadocs.org/docsets/PGLFormatter/0.0.3/)
+- [0.0.3](http://cocoadocs.org/docsets/PGLFormatter/0.0.3/)
 
-Because of a Cocoapods bug only the [0.0.1](http://cocoadocs.org/docsets/PGLFormatter/0.0.1/) is available, as soon as they fixed it all the docs would be generated.
 
 ## Task
 - [x] Support Cocoapods
