@@ -2,7 +2,7 @@
 PGLFormatter is a simple container of NSFormatter and useful functions  
 [![Build Status](https://travis-ci.org/PGLongo/PGLFormatter.svg?branch=master)](https://travis-ci.org/PGLongo/PGLFormatter)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-![CocoaPods](https://img.shields.io/cocoapods/v/PGLFormatter.svg) 
+[![CocoaPods](https://img.shields.io/cocoapods/v/PGLFormatter.svg)](https://cocoapods.org/pods/PGLFormatter) 
 
 ##Reason
 Formatters are extremely expensive to create so it's very important to reuse the formatter as much as you can. 
