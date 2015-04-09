@@ -36,7 +36,6 @@ class NSDateTests: XCTestCase {
         XCTAssertNotNil(PGLFormatter.dateFormatter)
         let result = date.format()
         XCTAssertNotNil(result)
-        XCTAssertTrue(count(result) > 0 )
         XCTAssertEqual("11/30/88, 12:00 AM", result , "String mismatch")
     }
     
