@@ -90,6 +90,20 @@ public class PGLFormatter: NSObject {
     }
 
     
+    /**
+    TimeFormatter
+    */
+    public class var timeFormatter: NSDateComponentsFormatter {
+        struct Static {
+            static let instance : NSDateComponentsFormatter = {
+                let formatter = NSDateComponentsFormatter()
+                return formatter
+                }()
+            
+        }
+        return Static.instance
+    }
+    
 
 
     

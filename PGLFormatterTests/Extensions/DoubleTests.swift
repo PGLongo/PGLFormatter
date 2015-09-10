@@ -75,5 +75,17 @@ class DoubleTests: XCTestCase {
         formatter.unitStyle = .Long
         XCTAssertEqual("42.42 kilograms", Double(42.42).formatMass(.Kilogram))
     }
+    
+    func testFormatTime(){
+        var formatter = PGLFormatter.timeFormatter
+        XCTAssertNotNil(formatter, "Formatter should be not nil")
+        formatter.unitsStyle = .Abbreviated
+        XCTAssertEqual("-42s", (Double(-42)).formatTime()!)
+        XCTAssertEqual("42s", (Double(42.42)).formatTime()!)
+        XCTAssertEqual("42s", (Double(42)).formatTime()!)
+        XCTAssertEqual("1h 10m", Double(4200).formatTime()!)
+        
+    }
+
 
 }

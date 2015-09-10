@@ -68,6 +68,14 @@ public extension Float {
     func formatMass(unit: NSMassFormatterUnit)->String{
         return PGLFormatter.massFormatter.stringFromValue(Double(self), unit:unit)
     }
+    
+    /**
+    Returns a properly formatted time string for self
+    :returns: A localized string that combines self.
+    */
+    func formatTime()->String?{
+        return PGLFormatter.timeFormatter.stringFromTimeInterval(Double(self))
+    }
 
 }
 

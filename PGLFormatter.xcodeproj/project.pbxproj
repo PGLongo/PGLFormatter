@@ -210,11 +210,13 @@
 		1277BEB81AB7419A002BBE75 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = PGL;
 				TargetAttributes = {
 					1277BEC01AB7419A002BBE75 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = Y78FS8L855;
 					};
 					1277BECB1AB7419A002BBE75 = {
 						CreatedOnToolsVersion = 6.2;

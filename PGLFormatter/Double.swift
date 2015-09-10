@@ -67,5 +67,14 @@ public extension Double {
     func formatMass(unit: NSMassFormatterUnit)->String{
         return PGLFormatter.massFormatter.stringFromValue(self, unit:unit)
     }
+    
+    
+    /**
+    Returns a properly formatted time string for self
+    :returns: A localized string that combines self.
+    */
+    func formatTime()->String?{
+        return PGLFormatter.timeFormatter.stringFromTimeInterval(self)
+    }
 
 }

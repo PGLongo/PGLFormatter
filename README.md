@@ -85,6 +85,17 @@ date.format() // 11/30/88, 12:00 AM
 
 ```
 
+### TimeFormatter
+```swift
+PGLFormatter.timeFormatter
+formatter.unitsStyle = .Abbreviated
+// set the formatter behavior
+
+42.formatTime()! // 42s
+4200.formatTime()! // 1h 10m
+
+```
+
 ## Documentation
 Documentation is generated and manteined by Cocoapods. You can read the latest documentation at the following [URL](http://cocoadocs.org/docsets/PGLFormatter/latest) and add the docs to [Dash](http://kapeli.com/dash).
 

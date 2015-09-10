@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0715DAFD05ED3E65A6B1BD9AF5B11D24A4215E61",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0715DAFD05ED3E65A6B1BD9AF5B11D24A4215E61" : 0,
+    "A324B32EF1CE1721FF5AE80AAEDCAB397C0AE1AC" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "42974120-6A7C-4480-A0AB-1868DD62A591",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0715DAFD05ED3E65A6B1BD9AF5B11D24A4215E61" : "PGLFormatter\/",
+    "A324B32EF1CE1721FF5AE80AAEDCAB397C0AE1AC" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PGLFormatter",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PGLFormatter.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PGLongo\/PGLFormatter",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0715DAFD05ED3E65A6B1BD9AF5B11D24A4215E61"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/git.soullesspg.com\/scm\/keyn\/ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A324B32EF1CE1721FF5AE80AAEDCAB397C0AE1AC"
+    }
+  ]
+}
