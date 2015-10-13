@@ -83,9 +83,9 @@ class IntTests: XCTestCase {
         let formatter = PGLFormatter.timeFormatter
         XCTAssertNotNil(formatter, "Formatter should be not nil")
         formatter.unitsStyle = .Abbreviated
-        XCTAssertEqual("-42s", (-42).formatTime())
-        XCTAssertEqual("42s", (42).formatTime())
-        XCTAssertEqual("1h 10m", 4200.formatTime())
+        XCTAssertEqual("-42s", (Int(-42)).formatTime()!)
+        XCTAssertEqual("42s", (Int(42)).formatTime()!)
+        XCTAssertEqual("1h 10m", (Int(4200)).formatTime()!)
 
     }
 }
