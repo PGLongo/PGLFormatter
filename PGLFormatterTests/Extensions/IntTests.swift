@@ -12,7 +12,7 @@ class IntTests: XCTestCase {
 
     
     func testFormat(){
-        var price:Int = 1234
+        let price:Int = 1234
         var formatter = PGLFormatter.numberFormatter
         
         formatter.decimalSeparator = "."
@@ -41,14 +41,14 @@ class IntTests: XCTestCase {
     }
 
     func testFormatLengthFromMeters(){
-        var formatter = PGLFormatter.lenghtFormatter
+        let formatter = PGLFormatter.lenghtFormatter
         XCTAssertNotNil(formatter, "Formatter should be not nil")
         formatter.unitStyle = .Medium
         XCTAssertEqual("45.931 yd", 42.formatLenghtFromMeters())
     }
     
     func testFormatLength(){
-        var formatter = PGLFormatter.lenghtFormatter
+        let formatter = PGLFormatter.lenghtFormatter
         XCTAssertNotNil(formatter, "Formatter should be not nil")
         formatter.unitStyle = .Medium
         XCTAssertEqual("42 m", 42.formatLenght(.Meter))
@@ -61,14 +61,14 @@ class IntTests: XCTestCase {
     
     
     func testFormatMassFromKilograms(){
-        var formatter = PGLFormatter.massFormatter
+        let formatter = PGLFormatter.massFormatter
         XCTAssertNotNil(formatter, "Formatter should be not nil")
         formatter.unitStyle = .Medium
         XCTAssertEqual("92.594 lb", 42.formatMassFromKilograms())
     }
     
     func testFormatMass(){
-        var formatter = PGLFormatter.massFormatter
+        let formatter = PGLFormatter.massFormatter
         XCTAssertNotNil(formatter, "Formatter should be not nil")
         formatter.unitStyle = .Medium
         XCTAssertEqual("42 g", 42.formatMass(.Gram))
@@ -80,12 +80,12 @@ class IntTests: XCTestCase {
     }
     
     func testFormatTime(){
-        var formatter = PGLFormatter.timeFormatter
+        let formatter = PGLFormatter.timeFormatter
         XCTAssertNotNil(formatter, "Formatter should be not nil")
         formatter.unitsStyle = .Abbreviated
-        XCTAssertEqual("-42s", (-42).formatTime()!)
-        XCTAssertEqual("42s", (42).formatTime()!)
-        XCTAssertEqual("1h 10m", 4200.formatTime()!)
+        XCTAssertEqual("-42s", (-42).formatTime())
+        XCTAssertEqual("42s", (42).formatTime())
+        XCTAssertEqual("1h 10m", 4200.formatTime())
 
     }
 }

@@ -12,7 +12,7 @@ import XCTest
 class FloatTests: XCTestCase {
 
     func testFormat(){
-        var price:Float = 1234.424
+        let price:Float = 1234.424
         var formatter = PGLFormatter.numberFormatter
         
         formatter.decimalSeparator = "."
@@ -40,14 +40,14 @@ class FloatTests: XCTestCase {
     }
     
     func testFormatLengthFromMeters(){
-        var formatter = PGLFormatter.lenghtFormatter
+        let formatter = PGLFormatter.lenghtFormatter
         XCTAssertNotNil(formatter, "Formatter should be not nil")
         formatter.unitStyle = .Medium
         XCTAssertEqual("46.391 yd", Float(42.42).formatLenghtFromMeters())
     }
     
     func testFormatLength(){
-        var formatter = PGLFormatter.lenghtFormatter
+        let formatter = PGLFormatter.lenghtFormatter
         XCTAssertNotNil(formatter, "Formatter should be not nil")
         formatter.unitStyle = .Medium
         XCTAssertEqual("42.42 m", Float(42.42).formatLenght(.Meter))
@@ -58,14 +58,14 @@ class FloatTests: XCTestCase {
     }
     
     func testFormatMassFromKilograms(){
-        var formatter = PGLFormatter.massFormatter
+        let formatter = PGLFormatter.massFormatter
         XCTAssertNotNil(formatter, "Formatter should be not nil")
         formatter.unitStyle = .Medium
         XCTAssertEqual("93.52 lb", Float(42.42).formatMassFromKilograms())
     }
     
     func testFormatMass(){
-        var formatter = PGLFormatter.massFormatter
+        let formatter = PGLFormatter.massFormatter
         XCTAssertNotNil(formatter, "Formatter should be not nil")
         formatter.unitStyle = .Medium
         XCTAssertEqual("42.42 g", Float(42.42).formatMass(.Gram))
@@ -77,7 +77,7 @@ class FloatTests: XCTestCase {
     }
     
     func testFormatTime(){
-        var formatter = PGLFormatter.timeFormatter
+        let formatter = PGLFormatter.timeFormatter
         XCTAssertNotNil(formatter, "Formatter should be not nil")
         formatter.unitsStyle = .Abbreviated
         XCTAssertEqual("-42s", (Float(-42)).formatTime()!)

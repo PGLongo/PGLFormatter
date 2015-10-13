@@ -55,7 +55,6 @@ class NSDateTests: XCTestCase {
     
     func testFromStringWithInvalidFormat(){
         let dateFormatter = PGLFormatter.dateFormatter
-        var dateString = "11/30/1988"
         dateFormatter.dateFormat = "MM/dd/yyyy"
         
         XCTAssertNil(NSDate.fromString("11/42/1988"))
