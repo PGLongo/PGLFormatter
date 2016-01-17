@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 pNre. All rights reserved.
 //
 
-import UIKit
 
 public extension NSNumberFormatter{
     

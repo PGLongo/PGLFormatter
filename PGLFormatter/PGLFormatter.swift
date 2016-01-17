@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 pNre. All rights reserved.
 //
 
-import UIKit
 
 /**
 PGLFormatter is a container of NSFormatter exposed as class var for better reuse and used by the extensions implemented

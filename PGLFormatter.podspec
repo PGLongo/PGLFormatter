@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "PGLFormatter"
-  s.version      = "2.0"
+  s.version      = "2.1"
   s.summary      = "Simple container of NSFormatter and useful functions to format numbers and dates."
 
   s.description  = <<-DESC
@@ -19,9 +19,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = "PGLongo"
   s.ios.deployment_target = '8.0'
-
+  s.watchos.deployment_target = '2.0'
   s.source       = { :git => "https://github.com/PGLongo/PGLFormatter.git", :tag => s.version }
-
-
   s.source_files  = "PGLFormatter/*.swift"
 end
