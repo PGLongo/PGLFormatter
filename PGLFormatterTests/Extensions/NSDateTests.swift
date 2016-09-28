@@ -11,9 +11,9 @@ import XCTest
 
 class NSDateTests: XCTestCase {
     
-    let calendar = NSCalendar.currentCalendar()
-    let components = NSDateComponents()
-    var date: NSDate!
+    let calendar = NSCalendar.current
+    var components = DateComponents()
+    var date: Date!
     
     override func setUp() {
         super.setUp()
@@ -23,7 +23,8 @@ class NSDateTests: XCTestCase {
         components.hour = 0
         components.minute = 0
         components.second = 0
-        date = calendar.dateFromComponents(components)
+        
+        date = calendar.date(from: components as DateComponents)
     }
     
     override func tearDown() {
@@ -42,12 +43,12 @@ class NSDateTests: XCTestCase {
     func testFromString(){
         let dateFormatter = PGLFormatter.dateFormatter
         dateFormatter.dateFormat = "MM/dd/yyyy"
-        var dateFromString = NSDate.fromString("11/30/1988")
+        
+        var dateFromString = Date.from(string:"11/30/1988")
         XCTAssertNotNil(dateFromString)
         XCTAssertEqual(date, dateFromString!, "Date mismatch")
-
         dateFormatter.dateFormat = "MM/dd/yyyy hh:mm"
-        dateFromString = NSDate.fromString("11/30/1988 00:00")
+        dateFromString = Date.from(string:"11/30/1988 00:00")
         XCTAssertNotNil(dateFromString)
         XCTAssertEqual(date, dateFromString!, "Date mismatch")
 
@@ -57,11 +58,11 @@ class NSDateTests: XCTestCase {
         let dateFormatter = PGLFormatter.dateFormatter
         dateFormatter.dateFormat = "MM/dd/yyyy"
         
-        XCTAssertNil(NSDate.fromString("11/42/1988"))
-        XCTAssertNil(NSDate.fromString("42/30/1988"))
-        XCTAssertNil(NSDate.fromString("30/11/-1988"))
-        XCTAssertNil(NSDate.fromString("3.14/11/1988"))
-        XCTAssertNil(NSDate.fromString("30/11/3.14"))
+        XCTAssertNil(Date.from(string:"11/42/1988"))
+        XCTAssertNil(Date.from(string:"42/30/1988"))
+        XCTAssertNil(Date.from(string:"30/11/-1988"))
+        XCTAssertNil(Date.from(string:"3.14/11/1988"))
+        XCTAssertNil(Date.from(string:"30/11/3.14"))
     }
 
 

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension NSDate{
+public extension Date{
     
     /**
     Returns a string representation of self formatted using the PGLFormatter.dateFormatter settings.
@@ -17,7 +17,7 @@ public extension NSDate{
     */
 
     func format() -> String{
-        return PGLFormatter.dateFormatter.stringFromDate(self)
+        return PGLFormatter.dateFormatter.string(from: self)
     }
     
     /**
@@ -26,7 +26,7 @@ public extension NSDate{
     
     :returns: A date representation of string interpreted using the PGLFormatter.dateFormatter settings.
     */
-    class func fromString(string: String) -> NSDate? {
-        return PGLFormatter.dateFormatter.dateFromString(string)
+    static func from(string: String) -> Date? {
+        return PGLFormatter.dateFormatter.date(from: string)
     }
 }

@@ -16,7 +16,9 @@ public extension Int {
     :returns: A string containing the formatted value of number using the PGLFormatter.numberFormatter settings.
     */
     func format() -> String{
-        return PGLFormatter.numberFormatter.stringFromNumber(self)!
+        
+        
+        return PGLFormatter.numberFormatter.string(for: self)!
     }
     
     /**
@@ -25,7 +27,7 @@ public extension Int {
     :returns: A string containing the formatted byteCount value using the PGLFormatter.byteFormatter settings.
     */
     func formatToByte() -> String {
-        return PGLFormatter.byteFormatter.stringFromByteCount(Int64(self))
+        return PGLFormatter.byteFormatter.string(fromByteCount: Int64(self))
     }
     
     /**
@@ -34,7 +36,7 @@ public extension Int {
     :returns: A string that combines a value and a unit string appropriate for the PGLFormatter.lenghtFormatter's locale.
     */
     func formatLenghtFromMeters()->String{
-        return PGLFormatter.lenghtFormatter.stringFromMeters(Double(self))
+        return PGLFormatter.lenghtFormatter.string(fromMeters: Double(self))
     }
     
     /**
@@ -43,8 +45,8 @@ public extension Int {
     
     :returns: A localized string that combines self value and unit.
     */
-    func formatLenght(unit: NSLengthFormatterUnit)->String{
-        return PGLFormatter.lenghtFormatter.stringFromValue(Double(self), unit:unit)
+    func formatLenght(_ unit: LengthFormatter.Unit)->String{
+        return PGLFormatter.lenghtFormatter.string(fromValue: Double(self), unit:unit)
     }
     
     /**
@@ -53,7 +55,7 @@ public extension Int {
     :returns: A string that combines a value and a unit string appropriate for the formatter’s locale.
     */
     func formatMassFromKilograms()->String{
-        return PGLFormatter.massFormatter.stringFromKilograms(Double(self))
+        return PGLFormatter.massFormatter.string(fromKilograms: Double(self))
     }
     
     
@@ -63,8 +65,8 @@ public extension Int {
     
     :returns: A localized string that combines self value and unit.
     */
-    func formatMass(unit: NSMassFormatterUnit)->String{
-        return PGLFormatter.massFormatter.stringFromValue(Double(self), unit:unit)
+    func formatMass(_ unit: MassFormatter.Unit)->String{
+        return PGLFormatter.massFormatter.string(fromValue: Double(self), unit:unit)
     }
 
     /**
@@ -72,7 +74,7 @@ public extension Int {
     :returns: A localized string that combines self.
     */
     func formatTime()->String?{
-        return PGLFormatter.timeFormatter.stringFromTimeInterval(Double(self))
+        return PGLFormatter.timeFormatter.string(from: Double(self))
     }
 }
 
@@ -83,7 +85,7 @@ public extension Int64 {
     :returns: A string containing the formatted byteCount value using the PGLFormatter.byteFormatter settings.
     */
     func formatToByte() -> String {
-        return PGLFormatter.byteFormatter.stringFromByteCount(self)
+        return PGLFormatter.byteFormatter.string(fromByteCount: self)
     }
     
     

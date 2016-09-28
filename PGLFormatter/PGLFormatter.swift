@@ -11,18 +11,18 @@ import Foundation
 /**
 PGLFormatter is a container of NSFormatter exposed as class var for better reuse and used by the extensions implemented
 */
-public class PGLFormatter: NSObject {
+open class PGLFormatter: NSObject {
     
     /**
     NSNumberFormatter
     */
-    public class var numberFormatter: NSNumberFormatter {
+    open class var numberFormatter: NumberFormatter {
         struct Static {
-            static let instance : NSNumberFormatter = {
-                let formatter = NSNumberFormatter()
-                formatter.locale = NSLocale.currentLocale()
-                formatter.formatterBehavior = .BehaviorDefault
-                formatter.numberStyle = .DecimalStyle
+            static let instance : NumberFormatter = {
+                let formatter = NumberFormatter()
+                formatter.locale = Locale.current
+                formatter.formatterBehavior = .default
+                formatter.numberStyle = .decimal
                 return formatter
                 }()
             
@@ -33,13 +33,13 @@ public class PGLFormatter: NSObject {
     /**
     NSDateFormatter
     */
-    public class var dateFormatter: NSDateFormatter {
+    open class var dateFormatter: DateFormatter {
         struct Static {
-            static let instance : NSDateFormatter = {
-                let formatter = NSDateFormatter()
-                formatter.locale = NSLocale.currentLocale()
-                formatter.dateStyle = .ShortStyle
-                formatter.timeStyle = .ShortStyle
+            static let instance : DateFormatter = {
+                let formatter = DateFormatter()
+                formatter.locale = Locale.current
+                formatter.dateStyle = .short
+                formatter.timeStyle = .short
                 return formatter
                 }()
             
@@ -50,10 +50,10 @@ public class PGLFormatter: NSObject {
     /**
     NSByteCountFormatter
     */
-    public class var byteFormatter: NSByteCountFormatter {
+    open class var byteFormatter: ByteCountFormatter {
         struct Static {
-            static let instance : NSByteCountFormatter = {
-                let formatter = NSByteCountFormatter()
+            static let instance : ByteCountFormatter = {
+                let formatter = ByteCountFormatter()
                 return formatter
                 }()
             
@@ -64,10 +64,10 @@ public class PGLFormatter: NSObject {
     /**
     NSLengthFormatter
     */
-    public class var lenghtFormatter: NSLengthFormatter {
+    open class var lenghtFormatter: LengthFormatter {
         struct Static {
-            static let instance : NSLengthFormatter = {
-                let formatter = NSLengthFormatter()
+            static let instance : LengthFormatter = {
+                let formatter = LengthFormatter()
                 return formatter
                 }()
             
@@ -78,10 +78,10 @@ public class PGLFormatter: NSObject {
     /**
     NSMassFormatter
     */
-    public class var massFormatter: NSMassFormatter {
+    open class var massFormatter: MassFormatter {
         struct Static {
-            static let instance : NSMassFormatter = {
-                let formatter = NSMassFormatter()
+            static let instance : MassFormatter = {
+                let formatter = MassFormatter()
                 return formatter
                 }()
             
@@ -93,10 +93,10 @@ public class PGLFormatter: NSObject {
     /**
     TimeFormatter
     */
-    public class var timeFormatter: NSDateComponentsFormatter {
+    open class var timeFormatter: DateComponentsFormatter {
         struct Static {
-            static let instance : NSDateComponentsFormatter = {
-                let formatter = NSDateComponentsFormatter()
+            static let instance : DateComponentsFormatter = {
+                let formatter = DateComponentsFormatter()
                 return formatter
                 }()
             

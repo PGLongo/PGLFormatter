@@ -16,7 +16,7 @@ public extension Double {
     :returns: A string containing the formatted value of number using the PGLFormatter.numberFormatter settings.
     */
     func format() -> String{
-        return PGLFormatter.numberFormatter.stringFromNumber(self)!
+        return PGLFormatter.numberFormatter.string(for: self)!
     }
     
     /**
@@ -25,7 +25,7 @@ public extension Double {
     :returns: A string containing the formatted byteCount value using the PGLFormatter.byteFormatter settings.
     */
     func formatToByte() -> String {
-        return PGLFormatter.byteFormatter.stringFromByteCount(Int64(self))
+        return PGLFormatter.byteFormatter.string(fromByteCount: Int64(self))
     }
     
     /**
@@ -35,7 +35,7 @@ public extension Double {
     */
 
     func formatLenghtFromMeters()->String{
-        return PGLFormatter.lenghtFormatter.stringFromMeters(self)
+        return PGLFormatter.lenghtFormatter.string(fromMeters: self)
     }
     
     /**
@@ -44,8 +44,8 @@ public extension Double {
     
     :returns: A localized string that combines self value and unit.
     */
-    func formatLenght(unit: NSLengthFormatterUnit)->String{
-        return PGLFormatter.lenghtFormatter.stringFromValue(self, unit:unit)
+    func formatLenght(_ unit: LengthFormatter.Unit)->String{
+        return PGLFormatter.lenghtFormatter.string(fromValue: self, unit:unit)
     }
     
     /**
@@ -55,7 +55,7 @@ public extension Double {
     */
 
     func formatMassFromKilograms()->String{
-        return PGLFormatter.massFormatter.stringFromKilograms(self)
+        return PGLFormatter.massFormatter.string(fromKilograms: self)
     }
     
     /**
@@ -64,8 +64,8 @@ public extension Double {
     
     :returns: A localized string that combines self value and unit.
     */
-    func formatMass(unit: NSMassFormatterUnit)->String{
-        return PGLFormatter.massFormatter.stringFromValue(self, unit:unit)
+    func formatMass(_ unit: MassFormatter.Unit)->String{
+        return PGLFormatter.massFormatter.string(fromValue: self, unit:unit)
     }
     
     
@@ -74,7 +74,7 @@ public extension Double {
     :returns: A localized string that combines self.
     */
     func formatTime()->String?{
-        return PGLFormatter.timeFormatter.stringFromTimeInterval(self)
+        return PGLFormatter.timeFormatter.string(from: self)
     }
 
 }

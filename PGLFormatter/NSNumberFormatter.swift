@@ -8,14 +8,14 @@
 
 import Foundation
 
-public extension NSNumberFormatter{
+public extension NumberFormatter{
     
     
     /**
         Set the number of digit
     */
 
-    func setPrecision(precision: Int){
+    func setPrecision(_ precision: Int){
         self.minimumFractionDigits = precision
         self.maximumFractionDigits = precision
     }
