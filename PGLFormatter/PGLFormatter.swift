@@ -25,7 +25,6 @@ open class PGLFormatter: NSObject {
                 formatter.numberStyle = .decimal
                 return formatter
                 }()
-
         }
         return Static.instance
     }
@@ -42,12 +41,10 @@ open class PGLFormatter: NSObject {
                 formatter.numberStyle = .currency
                 return formatter
             }()
-            
         }
         return Static.instance
     }
 
-    
     /**
     NSDateFormatter
     */
@@ -60,7 +57,6 @@ open class PGLFormatter: NSObject {
                 formatter.timeStyle = .short
                 return formatter
                 }()
-
         }
         return Static.instance
     }
@@ -74,7 +70,6 @@ open class PGLFormatter: NSObject {
                 let formatter = ByteCountFormatter()
                 return formatter
                 }()
-
         }
         return Static.instance
     }
@@ -88,7 +83,6 @@ open class PGLFormatter: NSObject {
                 let formatter = LengthFormatter()
                 return formatter
                 }()
-
         }
         return Static.instance
     }
@@ -116,9 +110,7 @@ open class PGLFormatter: NSObject {
                 let formatter = DateComponentsFormatter()
                 return formatter
                 }()
-
         }
         return Static.instance
     }
-
 }
