@@ -25,7 +25,6 @@
 		126EC3E71AB9F5DA0075C6A6 /* NSNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126EC3DD1AB9F5BA0075C6A6 /* NSNumberFormatter.swift */; };
 		1277BEC71AB7419A002BBE75 /* PGLFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1277BEC61AB7419A002BBE75 /* PGLFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1277BECD1AB7419A002BBE75 /* PGLFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1277BEC11AB7419A002BBE75 /* PGLFormatter.framework */; };
-		1277BED41AB7419A002BBE75 /* PGLFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1277BED31AB7419A002BBE75 /* PGLFormatterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +55,6 @@
 		1277BEC61AB7419A002BBE75 /* PGLFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGLFormatter.h; sourceTree = "<group>"; };
 		1277BECC1AB7419A002BBE75 /* PGLFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGLFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1277BED21AB7419A002BBE75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1277BED31AB7419A002BBE75 /* PGLFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PGLFormatterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				123A04311AB742E200B5380B /* Extensions */,
-				1277BED31AB7419A002BBE75 /* PGLFormatterTests.swift */,
 				1277BED11AB7419A002BBE75 /* Supporting Files */,
 			);
 			path = PGLFormatterTests;
@@ -310,7 +307,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				123A043C1AB7449A00B5380B /* IntTests.swift in Sources */,
-				1277BED41AB7419A002BBE75 /* PGLFormatterTests.swift in Sources */,
 				123A04331AB742E900B5380B /* DoubleTests.swift in Sources */,
 				123A043A1AB7442D00B5380B /* FloatTests.swift in Sources */,
 				126EC3E61AB9F5DA0075C6A6 /* Date.swift in Sources */,
