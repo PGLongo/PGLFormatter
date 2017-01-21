@@ -31,6 +31,24 @@ open class PGLFormatter: NSObject {
     }
 
     /**
+     NSNumberFormatter
+     */
+    open class var currencyFormatter: NumberFormatter {
+        struct Static {
+            static let instance: NumberFormatter = {
+                let formatter = NumberFormatter()
+                formatter.locale = Locale.current
+                formatter.formatterBehavior = .default
+                formatter.numberStyle = .currency
+                return formatter
+            }()
+            
+        }
+        return Static.instance
+    }
+
+    
+    /**
     NSDateFormatter
     */
     open class var dateFormatter: DateFormatter {
