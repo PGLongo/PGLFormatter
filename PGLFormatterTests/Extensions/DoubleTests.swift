@@ -9,10 +9,9 @@
 import XCTest
 
 class DoubleTests: XCTestCase {
-    
 
-    func testFormat(){
-        let price:Double = 12356789.424
+    func testFormat() {
+        let price: Double = 12356789.424
         var formatter = PGLFormatter.numberFormatter
 
         formatter.decimalSeparator = "."
@@ -20,33 +19,33 @@ class DoubleTests: XCTestCase {
         formatter.setPrecision(3)
 
         XCTAssertEqual("12,356,789.424", price.format())
-    
+
         formatter = PGLFormatter.numberFormatter
         formatter.setPrecision(4)
         XCTAssertEqual("12,356,789.4240", price.format())
-        
+
         formatter = PGLFormatter.numberFormatter
         formatter.decimalSeparator = "."
         formatter.numberStyle = .currency
-        
+
         XCTAssertEqual("$12,356,789.4240", price.format())
 
     }
-    
-    func testByteFormat(){
+
+    func testByteFormat() {
 
         XCTAssertEqual("42 bytes", Double(42).formatToByte())
         XCTAssertEqual("42 KB", Double(42000).formatToByte())
     }
-    
-    func testFormatLengthFromMeters(){
+
+    func testFormatLengthFromMeters() {
         let formatter = PGLFormatter.lenghtFormatter
         XCTAssertNotNil(formatter, "Formatter should be not nil")
         formatter.unitStyle = .medium
         XCTAssertEqual("46.391 yd", Double(42.42).formatLenghtFromMeters())
     }
-    
-    func testFormatLength(){
+
+    func testFormatLength() {
         let formatter = PGLFormatter.lenghtFormatter
         XCTAssertNotNil(formatter, "Formatter should be not nil")
         formatter.unitStyle = .medium
@@ -56,15 +55,15 @@ class DoubleTests: XCTestCase {
         formatter.unitStyle = .long
         XCTAssertEqual("42.42 meters", Double(42.42).formatLenght(.meter))
     }
-    
-    func testFormatMassFromKilograms(){
+
+    func testFormatMassFromKilograms() {
         let formatter = PGLFormatter.massFormatter
         XCTAssertNotNil(formatter, "Formatter should be not nil")
         formatter.unitStyle = .medium
         XCTAssertEqual("93.52 lb", Double(42.42).formatMassFromKilograms())
     }
-    
-    func testFormatMass(){
+
+    func testFormatMass() {
         let formatter = PGLFormatter.massFormatter
         XCTAssertNotNil(formatter, "Formatter should be not nil")
         formatter.unitStyle = .medium
@@ -75,8 +74,8 @@ class DoubleTests: XCTestCase {
         formatter.unitStyle = .long
         XCTAssertEqual("42.42 kilograms", Double(42.42).formatMass(.kilogram))
     }
-    
-    func testFormatTime(){
+
+    func testFormatTime() {
         let formatter = PGLFormatter.timeFormatter
         XCTAssertNotNil(formatter, "Formatter should be not nil")
         formatter.unitsStyle = .abbreviated
@@ -84,8 +83,7 @@ class DoubleTests: XCTestCase {
         XCTAssertEqual("42s", (Double(42.42)).formatTime()!)
         XCTAssertEqual("42s", (Double(42)).formatTime()!)
         XCTAssertEqual("1h 10m", Double(4200).formatTime()!)
-        
-    }
 
+    }
 
 }
