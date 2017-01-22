@@ -10,4 +10,15 @@ platform :ios do
         scan
     end
     
+    lane :lint do
+        swiftlint(mode: :autocorrect)
+        repo_clean = `git status --porcelain`.empty?
+        if repo_clean
+            UI.success('Code is clean, all good! 💪')        
+        else
+            git_commit(path: ".", message: "Fix style with SwiftLint")
+            push_to_git_remote
+        end
+    end
+    
 end
