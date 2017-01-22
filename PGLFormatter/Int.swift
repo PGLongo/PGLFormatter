@@ -16,14 +16,13 @@ public extension Int {
 
         return PGLFormatter.numberFormatter.string(for: self)!
     }
-    
+
     /// Returns a string containing the  formatted value with currency of the provided number object.
     ///
     /// - Returns:  A string containing the formatted value with currency of number using the PGLFormatter.currencyFormatter settings.
     func formatCurrency() -> String {
         return PGLFormatter.currencyFormatter.string(for: self)!
     }
-
 
     /// Converts a byte count into a string without creating an NSNumber object.
     /// - Returns: A string containing the formatted byteCount value using the PGLFormatter.byteFormatter settings.

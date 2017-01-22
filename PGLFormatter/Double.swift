@@ -16,7 +16,7 @@ public extension Double {
     func format() -> String {
         return PGLFormatter.numberFormatter.string(for: self)!
     }
-    
+
     /// Returns a string containing the  formatted value with currency of the provided number object.
     ///
     /// - Returns:  A string containing the formatted value with currency of number using the PGLFormatter.currencyFormatter settings.
