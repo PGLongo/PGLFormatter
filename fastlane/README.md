@@ -11,6 +11,11 @@ sudo gem install fastlane
 fastlane ios test
 ```
 
+### ios lint
+```
+fastlane ios lint
+```
+
 
 ----
 
