@@ -16,6 +16,11 @@ fastlane ios test
 fastlane ios lint
 ```
 
+### ios pod
+```
+fastlane ios pod
+```
+
 
 ----
 

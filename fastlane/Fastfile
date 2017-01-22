@@ -22,4 +22,18 @@ platform :ios do
         end
     end
     
+    lane :pod do  |options|
+        lint
+        scan
+        desc "Release a new pod Version"          
+        pod_lib_lint        
+        increment_version_number(bump_type: options[:bump_type])     
+        version_bump_podspec(bump_type: options[:bump_type])        
+        version = get_version_number        
+        git_commit(path: ".", message: "Updated podspec to " + version)                    
+        add_git_tag(tag: version)
+        push_to_git_remote
+        pod_push        
+        UI.success("Updated podspec to " + version)        
+    end  
 end
