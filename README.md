@@ -97,11 +97,19 @@ formatter.unitsStyle = .Abbreviated
 ```
 
 ## Documentation
-Documentation is generated and manteined by Cocoapods. You can read the latest documentation at the following [URL](http://cocoadocs.org/docsets/PGLFormatter/latest) and add the docs to [Dash](http://kapeli.com/dash).
+Documentation is generated and manteined by Cocoapods. You can read the latest documentation at the following [URL](http://cocoadocs.org/docsets/PGLFormatter) and add the docs to [Dash](http://kapeli.com/dash).
 
 - [0.0.1](http://cocoadocs.org/docsets/PGLFormatter/0.0.1/)
 - [0.0.2](http://cocoadocs.org/docsets/PGLFormatter/0.0.2/)
 - [0.0.3](http://cocoadocs.org/docsets/PGLFormatter/0.0.3/)
+- [0.0.3](http://cocoadocs.org/docsets/PGLFormatter/0.0.3/)
+- [1.0](http://cocoadocs.org/docsets/PGLFormatter/1.0/)
+- [1.1](http://cocoadocs.org/docsets/PGLFormatter/1.1/)
+- [2.0](http://cocoadocs.org/docsets/PGLFormatter/2.0/)
+- [2.1](http://cocoadocs.org/docsets/PGLFormatter/2.1/)
+- [3.0](http://cocoadocs.org/docsets/PGLFormatter/3.0/)
+- [3.1.0](http://cocoadocs.org/docsets/PGLFormatter/3.1.0/)
+
 
 
 ## Task
