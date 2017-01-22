@@ -86,4 +86,14 @@ class DoubleTests: XCTestCase {
 
     }
 
+    func testFormatCurrency() {
+        let formatter = PGLFormatter.currencyFormatter
+        XCTAssertNotNil(formatter, "Formatter should be not nil")
+        formatter.setPrecision(2)
+        formatter.locale = Locale(identifier: "en_US")
+        XCTAssertEqual("-$42.00", Double(-42).formatCurrency())
+        XCTAssertEqual("$42.00", Double(42).formatCurrency())
+        XCTAssertEqual("$4,200.42", Double(4200.42).formatCurrency())
+    }
+
 }
