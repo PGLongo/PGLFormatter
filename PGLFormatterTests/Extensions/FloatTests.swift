@@ -83,7 +83,16 @@ class FloatTests: XCTestCase {
         XCTAssertEqual("42s", (Float(42.42)).formatTime()!)
         XCTAssertEqual("42s", (Float(42)).formatTime()!)
         XCTAssertEqual("1h 10m", Float(4200).formatTime()!)
+    }
 
+    func testFormatCurrency() {
+        let formatter = PGLFormatter.currencyFormatter
+        XCTAssertNotNil(formatter, "Formatter should be not nil")
+        formatter.setPrecision(2)
+        formatter.locale = Locale(identifier: "en_US")
+        XCTAssertEqual("-$42.00", Float(-42).formatCurrency())
+        XCTAssertEqual("$42.00", Float(42).formatCurrency())
+        XCTAssertEqual("$4,200.42", Float(4200.42).formatCurrency())
     }
 
 }
