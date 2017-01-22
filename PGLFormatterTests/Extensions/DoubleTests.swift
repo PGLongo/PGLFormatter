@@ -1,10 +1,9 @@
 //
-//  ExSwiftDoubleTests.swift
-//  ExSwift
+//  DoubleTests
+//  PGLFormatter
 //
-//  Created by pNre on 10/07/14.
-//  Copyright (c) 2014 pNre. All rights reserved.
-//
+//  Created by Piergiuseppe Longo on 16/03/15.
+//  Copyright (c) 2015 PGL. All rights reserved.
 
 import XCTest
 
