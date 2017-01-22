@@ -8,14 +8,10 @@
 
 import Foundation
 
-/**
-PGLFormatter is a container of NSFormatter exposed as class var for better reuse and used by the extensions implemented
-*/
+/// PGLFormatter is a container of NSFormatter exposed as class var for better reuse and used by the extensions implemented
 open class PGLFormatter: NSObject {
 
-    /**
-    NSNumberFormatter
-    */
+    /// NSNumberFormatter
     open class var numberFormatter: NumberFormatter {
         struct Static {
             static let instance: NumberFormatter = {
@@ -29,9 +25,7 @@ open class PGLFormatter: NSObject {
         return Static.instance
     }
 
-    /**
-     NSNumberFormatter
-     */
+    ///  NSNumberFormatter
     open class var currencyFormatter: NumberFormatter {
         struct Static {
             static let instance: NumberFormatter = {
@@ -45,9 +39,7 @@ open class PGLFormatter: NSObject {
         return Static.instance
     }
 
-    /**
-    NSDateFormatter
-    */
+    /// NSDateFormatter
     open class var dateFormatter: DateFormatter {
         struct Static {
             static let instance: DateFormatter = {
@@ -61,9 +53,7 @@ open class PGLFormatter: NSObject {
         return Static.instance
     }
 
-    /**
-    NSByteCountFormatter
-    */
+    /// NSByteCountFormatter
     open class var byteFormatter: ByteCountFormatter {
         struct Static {
             static let instance: ByteCountFormatter = {
@@ -74,9 +64,7 @@ open class PGLFormatter: NSObject {
         return Static.instance
     }
 
-    /**
-    NSLengthFormatter
-    */
+    /// NSLengthFormatter
     open class var lenghtFormatter: LengthFormatter {
         struct Static {
             static let instance: LengthFormatter = {
@@ -87,9 +75,7 @@ open class PGLFormatter: NSObject {
         return Static.instance
     }
 
-    /**
-    NSMassFormatter
-    */
+    /// NSMassFormatter
     open class var massFormatter: MassFormatter {
         struct Static {
             static let instance: MassFormatter = {
@@ -101,9 +87,7 @@ open class PGLFormatter: NSObject {
         return Static.instance
     }
 
-    /**
-    TimeFormatter
-    */
+    /// TimeFormatter
     open class var timeFormatter: DateComponentsFormatter {
         struct Static {
             static let instance: DateComponentsFormatter = {
