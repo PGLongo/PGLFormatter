@@ -13,7 +13,7 @@ public extension Float {
     ///Returns a string containing the formatted value of the provided number object.
     /// - Returns: A string containing the formatted value of number using the PGLFormatter.numberFormatter settings.
     func format() -> String {
-        return PGLFormatter.numberFormatter.string(for:self)!
+        return PGLFormatter.numberFormatter.string(for: self)!
     }
 
     /// Returns a string containing the  formatted value with currency of the provided number object.
@@ -39,7 +39,7 @@ public extension Float {
     /// - Parameter unit: The unit used in the resulting length string.
     /// - Returns: A localized string that combines self value and unit.
     func formatLenght(unit: LengthFormatter.Unit) -> String {
-        return PGLFormatter.lenghtFormatter.string(fromValue: Double(self), unit:unit)
+        return PGLFormatter.lenghtFormatter.string(fromValue: Double(self), unit: unit)
     }
 
     ///Returns a mass string for self value.
@@ -52,7 +52,7 @@ public extension Float {
     /// - Parameter unit: The unit used in the resulting mass string.
     /// - Returns: A localized string that combines self value and unit.
     func formatMass(unit: MassFormatter.Unit) -> String {
-        return PGLFormatter.massFormatter.string(fromValue: Double(self), unit:unit)
+        return PGLFormatter.massFormatter.string(fromValue: Double(self), unit: unit)
     }
 
     ///Returns a properly formatted time string for self

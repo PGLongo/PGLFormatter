@@ -43,11 +43,11 @@ class NSDateTests: XCTestCase {
         let dateFormatter = PGLFormatter.dateFormatter
         dateFormatter.dateFormat = "MM/dd/yyyy"
 
-        var dateFromString = Date.from(string:"11/30/1988")
+        var dateFromString = Date.from(string: "11/30/1988")
         XCTAssertNotNil(dateFromString)
         XCTAssertEqual(date, dateFromString!, "Date mismatch")
         dateFormatter.dateFormat = "MM/dd/yyyy hh:mm"
-        dateFromString = Date.from(string:"11/30/1988 00:00")
+        dateFromString = Date.from(string: "11/30/1988 00:00")
         XCTAssertNotNil(dateFromString)
         XCTAssertEqual(date, dateFromString!, "Date mismatch")
 
@@ -57,11 +57,11 @@ class NSDateTests: XCTestCase {
         let dateFormatter = PGLFormatter.dateFormatter
         dateFormatter.dateFormat = "MM/dd/yyyy"
 
-        XCTAssertNil(Date.from(string:"11/42/1988"))
-        XCTAssertNil(Date.from(string:"42/30/1988"))
-        XCTAssertNil(Date.from(string:"30/11/-1988"))
-        XCTAssertNil(Date.from(string:"3.14/11/1988"))
-        XCTAssertNil(Date.from(string:"30/11/3.14"))
+        XCTAssertNil(Date.from(string: "11/42/1988"))
+        XCTAssertNil(Date.from(string: "42/30/1988"))
+        XCTAssertNil(Date.from(string: "30/11/-1988"))
+        XCTAssertNil(Date.from(string: "3.14/11/1988"))
+        XCTAssertNil(Date.from(string: "30/11/3.14"))
     }
 
 }

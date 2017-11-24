@@ -42,7 +42,7 @@ public extension Double {
     /// - Returns: A localized string that combines self value and unit.
     /// 
     func formatLenght(_ unit: LengthFormatter.Unit) -> String {
-        return PGLFormatter.lenghtFormatter.string(fromValue: self, unit:unit)
+        return PGLFormatter.lenghtFormatter.string(fromValue: self, unit: unit)
     }
 
     /// Returns a mass string for self value.
@@ -56,7 +56,7 @@ public extension Double {
     /// - Parameter unit: The unit used in the resulting mass string.
     /// - Returns: A localized string that combines self value and unit.
     func formatMass(_ unit: MassFormatter.Unit) -> String {
-        return PGLFormatter.massFormatter.string(fromValue: self, unit:unit)
+        return PGLFormatter.massFormatter.string(fromValue: self, unit: unit)
     }
 
     /// Returns a properly formatted time string for self
